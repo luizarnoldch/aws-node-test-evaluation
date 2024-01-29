@@ -48,9 +48,9 @@ export const PostPeopleToDynamoDB = async (req: Request, res: Response) => {
 
 export const GetPeopleFromDynamoDB = async (req: Request, res: Response) => {
     const { id } = req.params;
-    const idReq: number = parseInt(id, 10)
+    console.log(id)
     try {
-        const response = await peopleService.GetPeopleFromDynamoDB(idReq);
+        const response = await peopleService.GetPeopleFromDynamoDB(id);
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Allow-Credentials', 'true');
 

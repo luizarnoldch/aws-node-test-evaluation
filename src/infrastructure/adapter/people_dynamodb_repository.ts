@@ -56,7 +56,7 @@ export class PeopleDynamoDBRepository implements PeopleRepository {
     return persona;
   }
 
-  async GetPeopleFromDynamoDB(id: number): Promise<Persona | unknown> {
+  async GetPeopleFromDynamoDB(id: string): Promise<Persona | unknown> {
     try {
         const params = {
             TableName: this.tableName,

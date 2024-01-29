@@ -16,7 +16,7 @@ export class PeopleServiceDynamoDB implements PeopleService {
     async PostPeopleToDynamoDB(persona: Persona): Promise<Persona | unknown> {
         return this.repository.PostPeopleToDynamoDB(persona)
     }
-    async GetPeopleFromDynamoDB(id: number): Promise<Persona | unknown>  {
+    async GetPeopleFromDynamoDB(id: string): Promise<Persona | unknown>  {
         return this.repository.GetPeopleFromDynamoDB(id)
     }
 }
