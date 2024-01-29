@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {                              
+        "module": "commonjs",                           
+        "outDir": "./dist",                             
+        "rootDir": "./",                             
+        "strict": true,                                 
+        "esModuleInterop": true,                        
+        "skipLibCheck": true,                           
+        "forceConsistentCasingInFileNames": false,
+        "strictNullChecks": false,
+        "noImplicitAny": false,
+        "strictBindCallApply": false,
+        "noFallthroughCasesInSwitch": false,
+        "declaration": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "ES2021",
+        "sourceMap": true,
+        "baseUrl": "./"
+	},
+	"include": ["env.d.ts", "**/*.ts", ".dist/types/**/*.ts"],
+	"exclude": ["node_modules"]
+}
