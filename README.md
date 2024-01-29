@@ -52,6 +52,16 @@
 
 ```
 
+
+```shell
+
+  SWAPI_BASE_URL="https://swapi.py4e.com/api/"
+  TEST_PEOPLE_TABLE="TEST_PEOPLE_TABLE"
+  ENV="DEV"
+  PORT="3000"
+
+```
+
 # Despliegue #
 
 Instalación de dependencias
@@ -75,6 +85,50 @@ Depiegue
 
     # aws
     npm run deploy
+
+```
+
+# Desarollo #
+
+Ejecución de dynamoLocal
+
+```shell
+
+    npm i || npm i --legacy-peer-deps
+
+    # instalar docker cli o en terminal
+    # make
+    make dynamo-up
+
+```
+
+Ejecución de Express como framework
+
+```shell
+
+    npm run dev
+
+```
+
+# Testing #
+
+Ejecución de dynamoLocal
+
+```shell
+
+    npm i || npm i --legacy-peer-deps
+    
+    # instalar docker cli o en terminal
+    # make
+    make dynamo-up
+
+```
+
+Ejecución del testing unitario y de integración
+
+```shell
+
+    npm run test
 
 ```
 
