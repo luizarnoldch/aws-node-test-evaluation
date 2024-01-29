@@ -62,6 +62,13 @@
 
 ```
 
+```shell
+
+  #clonar el repositorio
+  git clone https://github.com/luizarnoldch/aws-node-test-evaluation.git
+  
+```
+
 # Despliegue #
 
 Instalación de dependencias
