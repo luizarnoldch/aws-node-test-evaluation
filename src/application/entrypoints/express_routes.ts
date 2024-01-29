@@ -6,6 +6,6 @@ const router = Router()
 
 router.get("/people/:id", GetPeopleFromSWAPI);
 router.post("/people", PostPeopleToDynamoDB);
-router.post("/people/dynamo/:id", GetPeopleFromDynamoDB);
+router.get("/people/dynamo/:id", GetPeopleFromDynamoDB);
 
 export default router
