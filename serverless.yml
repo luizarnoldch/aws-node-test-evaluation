@@ -38,9 +38,25 @@ functions:
     handler: index.handler
     events:
       - httpApi:
-          method: '*'
-          path: '/{proxy+}'
+          method: GET
+          path: /
           cors: true
+      - httpApi:
+          method: GET
+          path: '/people/{id}'
+          cors:
+            allowedOrigins:
+              - '*'
+            allowedHeaders:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowedMethods:
+              - GET
+            allowCredentials: false
 
 resources:
   Resources:
