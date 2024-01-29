@@ -84,21 +84,21 @@ export function isPeople(object: any): object is People {
 
 export function ConvertDynamoItemToPersona(item) {
     return {
-        nombre: item.nombre?.S,
-        altura: item.altura?.S,
-        masa: item.masa?.S,
-        colorDeCabello: item.colorDeCabello?.S,
-        colorDePiel: item.colorDePiel?.S,
-        colorDeOjos: item.colorDeOjos?.S,
-        anioDeNacimiento: item.anioDeNacimiento?.S,
-        genero: item.genero?.S,
-        ciudadNatal: item.ciudadNatal?.S,
-        peliculas: item.peliculas?.L?.map(p => p?.S) || [],
-        especies: item.especies?.L?.map(e => e?.S) || [],
-        vehiculos: item.vehiculos?.L?.map(v => v?.S) || [],
-        navesEstelares: item.navesEstelares?.L?.map(n => n?.S) || [],
-        creado: item.creado?.S,
-        editado: item.editado?.S,
-        url: item.url?.S
+        nombre: item.nombre,
+        altura: item.altura,
+        masa: item.masa,
+        colorDeCabello: item.colorDeCabello,
+        colorDePiel: item.colorDePiel,
+        colorDeOjos: item.colorDeOjos,
+        anioDeNacimiento: item.anioDeNacimiento,
+        genero: item.genero,
+        ciudadNatal: item.ciudadNatal,
+        peliculas: item.peliculas || [],
+        especies: item.especies || [],
+        vehiculos: item.vehiculos || [],
+        navesEstelares: item.navesEstelares || [],
+        creado: item.creado,
+        editado: item.editado,
+        url: item.url
     };
 }
