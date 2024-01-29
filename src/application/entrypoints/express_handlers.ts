@@ -21,6 +21,8 @@ export const GetPeopleFromSWAPI = async (req: Request, res: Response) => {
     const idReq: number = parseInt(id, 10)
     try {
         const response = await peopleService.GetPeopleFromSWAPI(idReq);
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
         res.json(response);
     } catch (error: any) {
         res.status(500).json({ error: error.message });
@@ -30,6 +32,8 @@ export const GetPeopleFromSWAPI = async (req: Request, res: Response) => {
 export const PostPeopleToDynamoDB = async (req: Request, res: Response) => {
     try {
         const newPerson = await peopleService.PostPeopleToDynamoDB(req.body);
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
         res.status(201).json(newPerson);
     } catch (error: any) {
         res.status(500).json({ error: error.message });
