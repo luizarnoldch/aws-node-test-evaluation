@@ -32,6 +32,8 @@ provider:
             - dynamodb:DeleteItem
           Resource:
             - Fn::GetAtt: [PeopleSwapiTable, Arn]
+  httpApi:
+    cors: true
 
 functions:
   hello:
