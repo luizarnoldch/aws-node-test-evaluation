@@ -57,6 +57,7 @@ export class PeopleDynamoDBRepository implements PeopleRepository {
   }
 
   async GetPeopleFromDynamoDB(id: string): Promise<Persona | unknown> {
+    console.log("id", id)
     try {
         const params = {
             TableName: this.tableName,
@@ -71,6 +72,8 @@ export class PeopleDynamoDBRepository implements PeopleRepository {
             throw new Error(`Persona con ID ${id} no encontrada.`);
         }
         const persona: Persona = ConvertDynamoItemToPersona(Item);
+
+        console.log(persona)
 
         return persona;
     } catch (error) {

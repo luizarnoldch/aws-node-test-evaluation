@@ -13,14 +13,12 @@ export const GetPeopleByIdFromSwapi = async (id: number): Promise<People> => {
     const url = `${PEOPLE_SWAPI}${id}/`;
     try {
         const response = await axios.get(url);
-        return response.data; // `data` is already a JavaScript object, no need to call `.json()`
+        return response.data;
     } catch (error) {
         if (axios.isAxiosError(error)) {
-            // You can access the response property of the error object, if the request was made and server responded with a status code out of 2xx range
             console.error(`Error fetching data: ${error.response?.statusText}`);
             throw new Error(`Error fetching data: ${error.response?.statusText}`);
         } else {
-            // Handle non-Axios errors differently
             console.error(`Error fetching data: ${error}`);
             throw error;
         }
