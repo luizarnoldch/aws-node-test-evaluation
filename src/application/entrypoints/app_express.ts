@@ -16,7 +16,7 @@ app.use(express.json());
 // Routes
 
 app.get("/", (req: Request, res: Response) => {
-    res.json("Hello world")
+    res.json(`Hello world ${process.env.SWAPI_BASE_URL}`)
 });
 
 app.use(router)
