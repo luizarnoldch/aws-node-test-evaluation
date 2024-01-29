@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "5db013df-8a8a-4fdb-b3df-4924e32f0d9a",
+		"name": "Test-People",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30572211"
+	},
+	"item": [
+		{
+			"name": "hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://e0xghjgvkk.execute-api.us-east-1.amazonaws.com",
+					"protocol": "https",
+					"host": [
+						"e0xghjgvkk",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "luke",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://e0xghjgvkk.execute-api.us-east-1.amazonaws.com/people/1",
+					"protocol": "https",
+					"host": [
+						"e0xghjgvkk",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "luka create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Luka Skywalker\",\r\n  \"altura\": \"172\",\r\n  \"masa\": \"77\",\r\n  \"colorDeCabello\": \"blond\",\r\n  \"colorDePiel\": \"fair\",\r\n  \"colorDeOjos\": \"blue\",\r\n  \"anioDeNacimiento\": \"19BBY\",\r\n  \"genero\": \"masculino\",\r\n  \"ciudadNatal\": \"https://swapi.py4e.com/api/planets/1/\",\r\n  \"peliculas\": [\r\n    \"https://swapi.py4e.com/api/films/1/\",\r\n    \"https://swapi.py4e.com/api/films/2/\",\r\n    \"https://swapi.py4e.com/api/films/3/\",\r\n    \"https://swapi.py4e.com/api/films/6/\",\r\n    \"https://swapi.py4e.com/api/films/7/\"\r\n  ],\r\n  \"especies\": [\r\n    \"https://swapi.py4e.com/api/species/1/\"\r\n  ],\r\n  \"vehiculos\": [\r\n    \"https://swapi.py4e.com/api/vehicles/14/\",\r\n    \"https://swapi.py4e.com/api/vehicles/30/\"\r\n  ],\r\n  \"navesEstelares\": [\r\n    \"https://swapi.py4e.com/api/starships/12/\",\r\n    \"https://swapi.py4e.com/api/starships/22/\"\r\n  ],\r\n  \"creado\": \"2014-12-09T13:50:51.644000Z\",\r\n  \"editado\": \"2014-12-20T21:17:56.891000Z\",\r\n  \"url\": \"https://swapi.py4e.com/api/people/1/\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://e0xghjgvkk.execute-api.us-east-1.amazonaws.com/people",
+					"protocol": "https",
+					"host": [
+						"e0xghjgvkk",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "luke from dynamo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://e0xghjgvkk.execute-api.us-east-1.amazonaws.com/people/dynamo/66eea9ac-2a04-4811-aa81-5e1988242a93",
+					"protocol": "https",
+					"host": [
+						"e0xghjgvkk",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"people",
+						"dynamo",
+						"66eea9ac-2a04-4811-aa81-5e1988242a93"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
