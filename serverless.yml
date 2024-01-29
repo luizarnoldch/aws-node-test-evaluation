@@ -37,7 +37,10 @@ functions:
   hello:
     handler: index.handler
     events:
-      - httpApi: '*'
+      - httpApi:
+          method: '*'
+          path: '/{proxy+}'
+          cors: true
 
 resources:
   Resources:
