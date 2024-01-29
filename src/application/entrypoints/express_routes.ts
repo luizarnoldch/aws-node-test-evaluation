@@ -1,10 +1,11 @@
 import { Router } from "express";
-import { GetPeopleFromSWAPI, PostPeopleToDynamoDB } from "./express_handlers";
+import { GetPeopleFromSWAPI, PostPeopleToDynamoDB, GetPeopleFromDynamoDB } from "./express_handlers";
 
 
 const router = Router()
 
 router.get("/people/:id", GetPeopleFromSWAPI);
 router.post("/people", PostPeopleToDynamoDB);
+router.post("/people/dynamo/:id", GetPeopleFromDynamoDB);
 
 export default router

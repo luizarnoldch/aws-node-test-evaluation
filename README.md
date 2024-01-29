@@ -22,7 +22,7 @@
 
 - [x] Traducción de atributos de inglés a español
 
-- [ ] Uso de Serverless Framework
+- [x] Uso de Serverless Framework
 
 - [x] Uso de Node.js
 
@@ -34,7 +34,7 @@
 - [x] Uso de TypeScript
 - [ ] Documentación de uso
 - [ ] Documentación en Open API/Swagger
-- [ ] Desplegar sin errores en AWS con el comando deploy del framework serverless
+- [x] Desplegar sin errores en AWS con el comando deploy del framework serverless
 - [x] Mayor complejidad de Integración
-- [ ] Uso de un framework
+- [x] Uso de un framework
 - [x] Trabajar en capas y por dominio

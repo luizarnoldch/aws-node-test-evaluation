@@ -45,3 +45,19 @@ export const PostPeopleToDynamoDB = async (req: Request, res: Response) => {
         res.status(500).json({ error: error.message });
     }
 };
+
+export const GetPeopleFromDynamoDB = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const idReq: number = parseInt(id, 10)
+    try {
+        const response = await peopleService.GetPeopleFromDynamoDB(idReq);
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
+
+        console.log(response)
+
+        res.json(response);
+    } catch (error: any) {
+        res.status(500).json({ error: error.message });
+    }
+};
